@@ -1,49 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>My Landing Page</title>
+body {
+  font-family: Overpass;
+  margin: 0;
+  color: #404042;
+  font-size: 18px;
+}
 
-  <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+h1, h2, h3 {
+  font-family: Chivo;
+}
 
-<body>
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  color: white;
+  text-align: center;
+}
 
-<div class="banner">
-  <div class="container">
-    <h1>Discover Beautiful Places</h1>
-    <p>Travel around the world with unforgettable experiences.</p>
-    <a href="https://www.google.com" class="button-blue">Start Exploring</a>
-  </div>
-</div>
+.container {
+  width: 900px;
+  margin: auto;
+}
 
-<div class="container">
-  <h2>Our Destinations</h2>
+.button-blue {
+  background: #1A48E3;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+}
 
-  <div class="cards">
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
 
-    <div class="card-white">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Mountains">
-      <h3>Mountains</h3>
-    </div>
+.card-white {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,.15);
+}
 
-    <div class="card-white">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Beach">
-      <h3>Beach</h3>
-    </div>
+.card-white img {
+  width: 100%;
+  border-radius: 8px;
+}
 
-    <div class="card-white">
-      <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600" alt="City">
-      <h3>City</h3>
-    </div>
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
 
-  </div>
-</div>
+@media (max-width:900px){
+  .container{
+    width:90%;
+  }
 
-<div class="footer">
-  <p>Made with ❤️ by Melisa Naz Polat</p>
-</div>
-
-</body>
-</html>
+  .cards{
+    grid-template-columns:1fr;
+  }
+}
